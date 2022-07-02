@@ -15,9 +15,9 @@
                                 { title: 'Mobile app development' }])
   
   
-  tests = Test.create([{ title: 'Ruby', level: 2, user_id: users[0].id, category_id: categories[0].id },
-                       { title: 'PHP', level: 2, user_id: users[0].id, category_id: categories[0].id },
-                       { title: 'JavaScript', level: 1, user_id: users[1].id, category_id: categories[1].id }])
+  tests = Test.create([{ title: 'Ruby', level: 2, author_id: users[0].id, category_id: categories[0].id },
+                       { title: 'PHP', level: 2, author_id: users[0].id, category_id: categories[0].id },
+                       { title: 'JavaScript', level: 1, author_id: users[1].id, category_id: categories[1].id }])
 
   questions = Question.create([{ body: 'Какой метод позволяет привести строку в нижний регистр?', test_id: tests[0].id },
                                { body: 'Какая арифметическая операция приводит к ошибке в javascript?', test_id: tests[2].id }])
