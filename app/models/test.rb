@@ -5,7 +5,7 @@
 
     has_many :questions, dependent: :destroy
     has_many :stories, dependent: :destroy
-    has_many :users, through: :stories, dependent: :destroy
+    has_many :users, through: :stories
 
 
     def self.tests_by_category(category)

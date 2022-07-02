@@ -2,7 +2,7 @@ class User < ApplicationRecord
 
   has_many :user_tests, class_name: 'Test', foreign_key: :author_id, dependent: :destroy
   has_many :stories, dependent: :destroy
-  has_many :tests, through: :stories, dependent: :destroy
+  has_many :tests, through: :stories
 
   def tests(level)
     Test.joins('JOIN stories ON tests.id = stories.test_id')
