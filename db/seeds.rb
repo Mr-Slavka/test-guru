@@ -7,14 +7,16 @@
   Story.delete_all
 
 
-  users = User.create([{ name: 'Admin', password: '1', admin: true }, { name: 'Admin2', password: '12', admin: true },
-                       { name: 'User', password: '123' }, { name: 'User2', password: '1234' }])
-  
-  
+  users = User.create([{ name: 'Admin', password: '1', admin: true, email: 'email@email.com' },
+                       { name: 'Admin2', password: '12', admin: true, email: 'email@email1.com' },
+                       { name: 'User', password: '123', email: 'email@email2.com' },
+                       { name: 'User2', password: '1234', email: 'email@email3.com' }])
+
+
   categories = Category.create([{ title: 'Backend' }, { title: 'Frontend' },
                                 { title: 'Mobile app development' }])
-  
-  
+
+
   tests = Test.create([{ title: 'Ruby', level: 2, author_id: users[0].id, category_id: categories[0].id },
                        { title: 'PHP', level: 2, author_id: users[0].id, category_id: categories[0].id },
                        { title: 'JavaScript', level: 1, author_id: users[1].id, category_id: categories[1].id }])
@@ -22,7 +24,7 @@
   questions = Question.create([{ body: 'Какой метод позволяет привести строку в нижний регистр?', test_id: tests[0].id },
                                { body: 'Какая арифметическая операция приводит к ошибке в javascript?', test_id: tests[2].id }])
 
-  
+
 
   Answer.create([{ body: 'upcase()', correct: false, question_id: questions[0].id },
                  { body: 'dcase()', correct: false, question_id: questions[0].id },
@@ -37,4 +39,3 @@
 
   Story.create([{ user_id: users[2].id, test_id: tests[0].id }, { user_id: users[3].id, test_id: tests[1].id },
                 { user_id: users[3].id, test_id: tests[2].id }, { user_id: users[3].id, test_id: tests[0].id }])
-  
