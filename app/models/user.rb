@@ -4,8 +4,10 @@ class User < ApplicationRecord
   has_many :stories, dependent: :destroy
   has_many :tests, through: :stories
 
-  def tests(level)
-    Test.joins('JOIN stories ON tests.id = stories.test_id')
-        .where('stories.user_id = :id  AND level =  :level', id: id, level: level)
+  validates :name, presence: true
+  validates :email, presence: true, uniqueness: true
+
+  def tests_by_level(search_level)
+    tests.by_level(search_level)
   end
 end
