@@ -1,5 +1,5 @@
 
-  <%= form_with model: @test  do |f| %>
+  <%= form_with model: @test, local: true  do |f| %>
     <%= render 'shared/errors', resource: @test %>
 
     <p>
