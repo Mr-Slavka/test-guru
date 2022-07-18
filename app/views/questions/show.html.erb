@@ -2,4 +2,6 @@
   <h1>Question</h1>
   <%= @question.inspect %><br>
 
-  <p> <%= link_to "Delete?", @question, method: :delete %> </p>
+
+  <p> <%= link_to 'Back to questions', test_path(@question.test) %> </p>
+  <p> <%= link_to "Delete?", @question, method: :delete,data: { confirm: 'Are you sure?' } %> </p>

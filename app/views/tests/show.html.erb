@@ -1,0 +1,30 @@
+
+  <h2>Test <%= @test.title %></h2>
+
+  <p>
+    <strong>Level: </strong>
+    <%= @test.level %>
+  </p>
+
+  <p>
+    <strong>Category: </strong>
+    <%= @test.category.title%>
+  </p>
+
+  <p>
+    <strong>Author:</strong>
+    <%= @test.author.name %>
+  </p>
+  <h4>Questions <%= link_to "Create a new question", new_test_question_path(@test) %></h4>
+
+  <table>
+    <tr>
+      <th>Body</th>
+      <th colspan="3">Actions</th>
+    </tr>
+    <%= render @test.questions %>
+  </table>
+
+  <%= link_to 'Edit test', edit_test_path(@test) %> |
+  <%= link_to 'Back to all tests', tests_path %>|
+  <%= link_to 'Delete', test_path, method: :delete, data: { confirm: 'Are you sure?' } %>
