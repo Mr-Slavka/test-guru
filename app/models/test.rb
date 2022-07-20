@@ -4,8 +4,8 @@
     belongs_to :category
 
     has_many :questions, dependent: :destroy
-    has_many :stories, dependent: :destroy
-    has_many :users, through: :stories
+    has_many :test_passages, dependent: :destroy
+    has_many :users, through: :test_passages
 
     validates :title, presence: true,
                       uniqueness: { scope: %i[level] }
