@@ -7,10 +7,10 @@
   Story.delete_all
 
 
-  users = User.create([{ name: 'Admin', password: '1', admin: true, email: 'email@email.com' },
-                       { name: 'Admin2', password: '12', admin: true, email: 'email@email1.com' },
-                       { name: 'User', password: '123', email: 'email@email2.com' },
-                       { name: 'User2', password: '1234', email: 'email@email3.com' }])
+  users = User.create([{ name: 'Admin', password_digest: '1', admin: true, email: 'email@email.com' },
+                       { name: 'Admin2', password_digest: '12', admin: true, email: 'email@email1.com' },
+                       { name: 'User', password_digest: '123', email: 'email@email2.com' },
+                       { name: 'User2', password_digest: '1234', email: 'email@email3.com' }])
 
 
   categories = Category.create([{ title: 'Backend' }, { title: 'Frontend' },
