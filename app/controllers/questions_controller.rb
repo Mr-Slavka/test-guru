@@ -6,8 +6,7 @@ class QuestionsController < ApplicationController
   rescue_from ActiveRecord::RecordNotFound, with: :rescue_question_not_found
 
 
-  def show
-  end
+  def show; end
 
   def new
     @question = @test.questions.build
