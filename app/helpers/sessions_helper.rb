@@ -1,6 +1,6 @@
 
   module SessionsHelper
-    def show_flash(type)
-      content_tag(:p, flash[type], class: "flash #{type}") if flash[type]
+    def flash_message
+      render 'shared/flashes' if flash.present?
     end
   end

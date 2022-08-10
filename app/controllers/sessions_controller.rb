@@ -19,6 +19,7 @@
     def destroy
       session.delete(:user_id)
       @current_user = nil
+      flash[:info] = 'You are log out'
       redirect_to login_path
     end
   end
