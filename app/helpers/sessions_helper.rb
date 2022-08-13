@@ -1,6 +1,6 @@
 
   module SessionsHelper
     def flash_message
-      render 'shared/flashes' if flash.present?
+      render inline: "<% flash.each do |key, message| %> <p class= 'flash <%= key %>'><%= message %></p><% end %>"
     end
   end
