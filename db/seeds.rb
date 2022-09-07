@@ -1,5 +1,5 @@
 
-  User.delete_all
+
   Category.delete_all
   Test.delete_all
   Question.delete_all
@@ -7,23 +7,23 @@
 
 
 
-  users = User.create([{ name: 'Admin', password_digest: '$2a$12$1o3IGBatw99NCRXSLjYPDeul1bJZpKocSCQcyvNrRQnyiRpoEJw8G',
-                         admin: true, email: 'email@email.com' },
-                       { name: 'Admin2', password_digest: '$2a$12$1o3IGBatw99NCRXSLjYPDeul1bJZpKocSCQcyvNrRQnyiRpoEJw8G',
-                         admin: true, email: 'email@email1.com' },
-                       { name: 'User', password_digest: '$2a$12$1o3IGBatw99NCRXSLjYPDeul1bJZpKocSCQcyvNrRQnyiRpoEJw8G',
-                         email: 'email@email2.com' },
-                       { name: 'User2', password_digest: '$2a$12$1o3IGBatw99NCRXSLjYPDeul1bJZpKocSCQcyvNrRQnyiRpoEJw8G',
-                         email: 'email@email3.com' }])
+  #users = User.create([{ name: 'Admin', password_digest: '$2a$12$1o3IGBatw99NCRXSLjYPDeul1bJZpKocSCQcyvNrRQnyiRpoEJw8G',
+  #                       admin: true, email: 'email@email.com' },
+  # {                     name: 'Admin2', password_digest: '$2a$12$1o3IGBatw99NCRXSLjYPDeul1bJZpKocSCQcyvNrRQnyiRpoEJw8G',
+  #                       admin: true, email: 'email@email1.com' },
+  #                     { name: 'User', password_digest: '$2a$12$1o3IGBatw99NCRXSLjYPDeul1bJZpKocSCQcyvNrRQnyiRpoEJw8G',
+  #                       email: 'email@email2.com' },
+  #                     { name: 'User2', password_digest: '$2a$12$1o3IGBatw99NCRXSLjYPDeul1bJZpKocSCQcyvNrRQnyiRpoEJw8G',
+  #                       email: 'email@email3.com' }])
 
-
+  users = [User.first, User.last]
   categories = Category.create([{ title: 'Backend' }, { title: 'Frontend' },
                                 { title: 'Mobile app development' }])
 
 
-  tests = Test.create([{ title: 'Ruby', level: 2, author_id: users[0].id, category_id: categories[0].id },
-                       { title: 'PHP', level: 2, author_id: users[0].id, category_id: categories[0].id },
-                       { title: 'JavaScript', level: 1, author_id: users[1].id, category_id: categories[1].id }])
+  tests = Test.create([{ title: 'Ruby', level: 2, author: users.sample, category_id: categories[0].id },
+                       { title: 'PHP', level: 2, author: users.sample, category_id: categories[0].id },
+                       { title: 'JavaScript', level: 1, author: users.sample, category_id: categories[1].id }])
 
   questions = Question.create([{ body: 'Какой метод позволяет привести строку в нижний регистр?', test_id: tests[0].id },
                                { body: 'Какая арифметическая операция приводит к ошибке в javascript?', test_id: tests[2].id }])
