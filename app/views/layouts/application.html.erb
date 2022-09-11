@@ -1,17 +1,29 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>TestGuru</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <title>TestGuru</title>
+      <%= csrf_meta_tags %>
+      <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+      <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+      <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    </head>
 
-  <body>
-    <%= render 'shared/header' %>
+    <body>
+
+
+    <% if user_signed_in? %>
+      <li class="nav user"> <%= link_to "Logout", destroy_user_session_path, method: :delete %>
+      </li>
+      <li class="nav user">
+        <b><%= current_user.email %></b> Guru |</li>
+
+      <% flash[:notice] = "Welcome, #{current_user.email}!" %>
+
+    <% end %>
+
+    <%= render 'shared/flash' %>
     <%= yield %>
     <%= render 'shared/footer' %>
-  </body>
-</html>
+    </body>
+  </html>
