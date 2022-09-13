@@ -1,33 +1,79 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t 'hello'
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t('hello') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# The following keys must be escaped otherwise they will not be retrieved by
-# the default I18n backend:
-#
-# true, false, on, off, yes, no
-#
-# Instead, surround them with single quotes.
-#
-# en:
-#   'true': 'foo'
-#
-# To learn more, please read the Rails Internationalization guide
-# available at https://guides.rubyonrails.org/i18n.html.
 
-en:
-  hello: "Hello world"
+  en:
+    helpers:
+      select:
+        prompt: "Select category"
+      submit:
+        test:
+          create: "Create test"
+          update: "Update test"
+          start: "Start"
+          show: "Show"
+          edit: "Edit"
+          delete: "Delete"
+          confirm: "Are you sure?"
+          to_all_tests: "Back to all tests"
+        test_passage:
+          next: "Next"
+      label:
+        test:
+          title: "Title"
+          level: "Level"
+          category_id: "Category"
+    shared:
+      errors:
+        header:
+          one: "%{count} error detected"
+          other: "%{count} errors detected"
+    application:
+      welcome: "Welcome"
+      logout: "Logout"
+    tests:
+      index:
+        header: "Tricky tests"
+        title: "Title"
+        level: "Level"
+        questions_count: "Questions count"
+        actions: "Actions"
+    test_passages:
+      result:
+        header: "The %{title} Test was completed!"
+        all_tests: "All tests"
+        successful_html: "<p>The test is passed! You scored <span style='color: green;'>%{score}</span> </p>"
+        unsuccessful_html: "<p>The test is failed! You scored <span style='color: red;'>%{score}</span> </p>"
+      show:
+        header: "Passing the %{title} Test"
+        questions_number: "Questions number: %{quantity}"
+        question: "Question %{number}"
+    admin:
+      nav:
+        header: "TestGuru Admin Panel"
+        welcome: "Welcome"
+        logout: "Logout"
+      tests:
+        index:
+          header: "Tricky tests"
+          title: "Title"
+          level: "Level"
+          questions_count: "Questions count"
+          actions: "Actions"
+          create_test: "Create test"
+        create:
+          success: "Test was successfully created."
+        new:
+          header: "Create new test"
+        edit:
+          header: "Edit %{title} test"
+        show:
+          header: "Test %{title}"
+          level: "Level %{level}"
+          category: "Category %{category}"
+          questions: "Questions"
+          Author:  "Author"
+          new_question: "Create new question"
+          body: "Body"
+          actions: "Actions"
+          back: "Back"
+    tests_mailer:
+      completed_test:
+        subject: "You just completed the TestGuru test!"

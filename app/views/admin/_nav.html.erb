@@ -1,11 +1,12 @@
 
   <div class="nav nav-admin">
-    <span class="nav-admin title">TesGuru Admin Panel</span>
+    <span class="nav-admin title"><%= t('admin.nav.header') %></span>
 
     <div class="nav-admin user">
-      <b class="nav-admin user-email"><%= current_user.email %></b> Guru |
-      <%= link_to 'Logout', destroy_user_session_path, method: :delete %>
+      <b><%= current_user.email %></b> |
+      <%= link_to t('admin.nav.logout'), destroy_user_session_path, method: :delete %>
+
     </div>
-    <% flash[:notice] = "Welcome, #{current_user.first_name} #{current_user.last_name}!" %>
+    <% flash[:notice] = "#{t('admin.nav.welcome')}, #{current_user.first_name} #{current_user.last_name}!" %>
 
   </div>

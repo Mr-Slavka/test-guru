@@ -1,30 +1,31 @@
 
-  <h2>Test <%= @test.title %></h2>
+  <h2><%= t('.header', title: @test.title) %></h2>
 
   <p>
-    <strong>Level: </strong>
-    <%= @test.level %>
+    <strong><%= t('.level', level: @test.level) %></strong>
+
   </p>
 
   <p>
-    <strong>Category: </strong>
-    <%= @test.category.title%>
+    <strong><%= t('.category', category: @test.category.title) %> </strong>
+
   </p>
 
   <p>
-    <strong>Author:</strong>
+    <strong><%= t('.Author') %></strong>
     <%= @test.author.first_name %> <%= @test.author.last_name %>
   </p>
-  <h4>Questions <%= link_to "Create a new question", new_admin_test_question_path(@test) %></h4>
+  <h4><%= t('.questions') %> <%= link_to t('.new_question'), new_admin_test_question_path(@test) %></h4>
 
   <table>
     <tr>
-      <th>Body</th>
-      <th colspan="3">Actions</th>
+      <th><%= t('.body') %></th>
+      <th colspan="3"><%= t('.actions') %></th>
     </tr>
     <%= render partial: 'admin/questions/question', collection: @test.questions %>
   </table>
 
-  <%= link_to 'Edit test', edit_admin_test_path(@test)%> |
-  <%= link_to 'Back to all tests', admin_tests_path %>|
-  <%= link_to 'Delete', admin_test_path(@test), method: :delete, data: { confirm: 'Are you sure?' } %>
+  <%= link_to t('helpers.submit.test.edit'), edit_admin_test_path(@test)%> |
+  <%= link_to t('helpers.submit.test.to_all_tests'), admin_tests_path %>|
+  <%= link_to t('helpers.submit.test.delete'), admin_test_path(@test), method: :delete,
+              data: { confirm: t('helpers.submit.test.confirm') } %>

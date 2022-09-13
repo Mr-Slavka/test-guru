@@ -13,12 +13,12 @@
 
 
     <% if user_signed_in? %>
-      <li class="nav user"> <%= link_to "Logout", destroy_user_session_path, method: :delete %>
+      <li class="nav user"> <%= link_to t('application.logout'), destroy_user_session_path, method: :delete %>
       </li>
       <li class="nav user">
-        <b><%= current_user.email %></b> Guru |</li>
+        <b><%= current_user.email %></b> |</li>
 
-      <% flash[:notice] = "Welcome, #{current_user.email}!" %>
+      <% flash[:notice] = "#{t('application.welcome')} #{current_user.email}!" %>
 
     <% end %>
 

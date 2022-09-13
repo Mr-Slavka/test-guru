@@ -24,6 +24,9 @@ gem 'jbuilder', '~> 2.7'
 # gem 'bcrypt', '~> 3.1.7'
 gem 'devise', '~> 4.0'
 
+# Localization
+gem 'rails-i18n', '~> 6.0.0'
+
 gem 'letter_opener'
 
 # Use Active Storage variant
