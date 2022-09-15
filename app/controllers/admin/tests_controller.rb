@@ -14,7 +14,7 @@
       @test = current_user.tests.build(test_params)
 
       if @test.save
-        redirect_to admin_tests_path
+        redirect_to [:admin, @test], notice: t('.success')
       else
         render :new
       end
@@ -22,7 +22,7 @@
 
     def update
       if @test.update(test_params)
-        redirect_to admin_tests_path
+        redirect_to [:admin, @test]
       else
         render :edit
       end
