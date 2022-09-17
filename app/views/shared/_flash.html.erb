@@ -1,4 +1,4 @@
 
   <% flash.each do |key, message| %>
-    <p class="flash <%= key %>"><%= message %></p>
+    <%= content_tag :p, message, class: "alert alert-#{ApplicationHelper::AVAILABLE_FLASH[key.to_sym]}" %>
   <% end %>
