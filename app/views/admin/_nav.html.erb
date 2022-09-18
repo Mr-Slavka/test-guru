@@ -1,12 +1,12 @@
 
-  <div class="nav nav-admin">
-    <span class="nav-admin title"><%= t('admin.nav.header') %></span>
+  <nav class="navbar navbar-light bg-light">
+    <%= link_to t('admin.nav.header'), admin_tests_path, class: "navbar-brand" %>
 
-    <div class="nav-admin user">
-      <b><%= current_user.email %></b> |
+    <span class="navbar-text">
+      <%= current_user.email %> |
       <%= link_to t('admin.nav.logout'), destroy_user_session_path, method: :delete %>
+      <%= content_tag :p,"#{t('admin.nav.welcome')}, #{current_user.first_name} #{current_user.last_name}!", class: "alert alert-info" %>
+    </span>
 
-    </div>
-    <% flash[:notice] = "#{t('admin.nav.welcome')}, #{current_user.first_name} #{current_user.last_name}!" %>
 
-  </div>
+  </nav>
