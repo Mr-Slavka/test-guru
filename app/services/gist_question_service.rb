@@ -1,10 +1,12 @@
 
   class GistQuestionService
-    Result = Struct.new(:url, :html_url) do
+
+    Result = Struct.new(:info) do
       def success?
-        url.present?
+        info.status == 201
       end
     end
+
 
     def initialize(question, client = default_client)
       @question = question
@@ -13,12 +15,8 @@
     end
 
     def call
-      result = @client.create_gist(gist_params)
-      Result.new(result[:html_url])
-    end
-
-    def get_a_gist
-
+      @client.create_gist(gist_params)
+      Result.new(@client.last_response)
     end
 
     private
