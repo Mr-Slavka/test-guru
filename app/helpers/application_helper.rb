@@ -1,7 +1,7 @@
 
   module ApplicationHelper
 
-    AVAILABLE_FLASH = { notice: 'success', alert: 'danger' }
+    AVAILABLE_FLASH = { notice: 'success', alert: 'danger' }.freeze
     
     def current_year
       DateTime.current.year
