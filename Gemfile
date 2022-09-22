@@ -32,6 +32,12 @@ gem 'rails-i18n', '~> 6.0.0'
 
 gem 'letter_opener'
 
+# GitHub api client
+gem 'octokit', '~> 4.0'
+
+# to load env variables
+gem 'dotenv-rails'
+
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 

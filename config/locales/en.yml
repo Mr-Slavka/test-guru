@@ -28,6 +28,9 @@
     application:
       welcome: "Welcome"
       logout: "Logout"
+    gist_question_service:
+      gist_params:
+        description: "A question about %{title} from TestGuru"
     tests:
       index:
         header: "Tricky tests"
@@ -45,6 +48,12 @@
         header: "Passing the %{title} Test"
         questions_number: "Questions number: %{quantity}"
         question: "Question %{number}"
+        gist_question: "Gist Question"
+    gists:
+      create:
+        success: "Gist was successfully created!"
+        failure: "An error occurred while saving gist"
+        link_to_gist: "Link to gist"
     admin:
       nav:
         header: "TestGuru Admin Panel"
@@ -58,6 +67,7 @@
           questions_count: "Questions count"
           actions: "Actions"
           create_test: "Create test"
+          show_gists: "Show gists"
         create:
           success: "Test was successfully created."
         new:
@@ -74,6 +84,13 @@
           body: "Body"
           actions: "Actions"
           back: "Back"
+      gists:
+        index:
+          header: "Users gists"
+          question: "Question"
+          gist_url: "Link to gist"
+          user_email: "User Email"
+          back: "All tests"
     tests_mailer:
       completed_test:
         subject: "You just completed the TestGuru test!"
