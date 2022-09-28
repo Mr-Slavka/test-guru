@@ -27,13 +27,16 @@
       <%= f.password_field :password, autocomplete: "new-password" %>
     </div>
 
-    <div class="field">
+    <div class="field check-pass">
       <%= f.label :password_confirmation %><br />
       <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+      <%= octicon 'check', class: 'text-success hide' %>
+      <%= octicon 'circle-slash', class: 'text-danger hide' %>
+      <%= javascript_include_tag 'password_match'%>
     </div>
 
     <div class="actions">
-      <%= f.submit "Sign up" %>
+      <%= f.submit "Sign up", id: "submit"  %>
     </div>
   <% end %>
   <%= render "devise/shared/links" %>

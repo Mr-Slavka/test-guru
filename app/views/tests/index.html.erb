@@ -1,11 +1,17 @@
 
   <h2><%= t('.header') %></h2>
+
   <table class="table">
-    <thead>
-      <th><%= t('.title') %></th>
+    <tr class= "fs-5">
+    <th class="sort-by-title pointer">
+      <%= t('.title') %>
+      <%= octicon 'arrow-up', class: 'text-success hide' %>
+    <%= octicon 'arrow-down', class: 'text-success hide' %>
+    </th>
+
       <th><%= t('.level') %></th>
       <th><%= t('.questions_count') %></th>
       <th><%= t('.actions') %></th>
-    </thead>
+    </tr>
     <%= render @tests %>
   </table>
