@@ -84,6 +84,8 @@
           body: "Body"
           actions: "Actions"
           back: "Back"
+        form_inline:
+          submit: "OK"
       gists:
         index:
           header: "Users gists"

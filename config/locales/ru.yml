@@ -87,6 +87,8 @@ ru:
               body: "Вопрос"
               actions: "Действия"
               back: "Назад"
+          form_inline:
+            submit: "Принять"
       gists:
         index:
           header: "Пользовательские gists"
