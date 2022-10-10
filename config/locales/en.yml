@@ -38,6 +38,9 @@
         level: "Level"
         questions_count: "Questions count"
         actions: "Actions"
+      start:
+        no_questions: 'You can not take test with 0 question'
+
     test_passages:
       result:
         header: "The %{title} Test was completed!"

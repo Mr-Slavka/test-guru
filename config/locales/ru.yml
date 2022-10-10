@@ -41,6 +41,8 @@ ru:
           level: "Уровень"
           questions_count: "Количество вопросов"
           actions: "Действия"
+      start:
+        no_questions: 'Вы не можете проходить тест без вопросов'
   test_passages:
       result:
           header: "Тест %{title} завершен!"
