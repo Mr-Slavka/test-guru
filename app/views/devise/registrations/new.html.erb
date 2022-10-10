@@ -32,7 +32,7 @@
       <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
       <%= octicon 'check', class: 'text-success hide' %>
       <%= octicon 'circle-slash', class: 'text-danger hide' %>
-      <script type="text/javascript" src="app/assets/javascripts/utilities/password_match.js"></script>
+      <%= javascript_include_tag 'utilities/password_match'%>
     </div>
 
     <div class="actions">
