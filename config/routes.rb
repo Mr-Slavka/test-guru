@@ -2,6 +2,9 @@
 
     root 'tests#index'
 
+    get '/feedback', to: 'static_pages#feedback'
+    post '/feedback', to: 'static_pages#send_feedback'
+
     devise_for :users, path: :gurus, path_names: { sign_in: :login, sign_out: :logout }
 
 
