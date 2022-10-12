@@ -33,6 +33,10 @@
         header:
           one: "%{count} error detected"
           other: "%{count} errors detected"
+      nav:
+        feedback: "Feedback"
+        Login: "Log In"
+        Signup: "Sing Up"
     static_pages:
       feedback:
         send_your_feedback: "Send your feedback"
@@ -109,6 +113,62 @@
           gist_url: "Link to gist"
           user_email: "User Email"
           back: "All tests"
+      answers:
+        answer:
+          show: "Show"
+          edit: "Edit"
+          delete: "Delete"
+        form:
+          body: "body"
+          correct: "Сorrect"
+          submit: "Create answer"
+        edit:
+          edit: "Editing Answer"
+          back: "Back"
+        new:
+          new_answer: "New Answer"
+          back: "Back"
+        show:
+          question: "Question"
+          answer: "Answer"
+          correct: "Correct"
+          edit: "Edit"
+          back: "Back"
+      questions:
+        form:
+          body: "Body"
+          back: "Back"
+        question:
+          show_question: "Show "
+          edit_question: "Edit "
+          delete_question: "Delete "
+        show:
+          question: "Question"
+          answers: "Answers"
+          new_answer: "New answer"
     tests_mailer:
       completed_test:
         subject: "You just completed the TestGuru test!"
+    devise:
+      registrations:
+        new:
+          sign_up: "Sing Up"
+          email: "Email"
+          first_name: "First name"
+          last_name: "Last name"
+          password: "Password"
+          password_confirmation: "Password confirmation"
+      sessions:
+        new:
+          Login: "Log In"
+          password: "Password"
+          remember_me: "Remember me"
+      confirmations:
+        new:
+          resend: "Resend confirmation instructions"
+      shared:
+        links:
+          forgot: "Forgot your password?"
+          confirm_email: "Didn't receive confirmation instructions?"
+          unlock_email: "Didn't receive unlock instructions?"
+          omniauthable: "Sign in with"

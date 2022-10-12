@@ -30,12 +30,16 @@ ru:
     application:
       feedback: "Обратная связь"
   shared:
-      errors:
+    errors:
           header:
               few: "Обнаружено %{count} ошибки"
               many: "Обнаружено %{count} ошибок"
               one: "Обнаружена %{count} ошибка"
               other: "Обнаружено %{count} ошибки"
+    nav:
+      feedback: "Обратная связь"
+      Login: "Войти"
+      Signup: "Зарегистрироваться"
   static_pages:
     feedback:
       send_your_feedback: "Отправьте свой отзыв"
@@ -111,8 +115,64 @@ ru:
           gist_url: "Ссылка на gist"
           user_email: "Email пользователя"
           back: "Все тесты"
+      answers:
+        answer:
+          show: "Показать"
+          edit: "Редактировать"
+          delete: "Удалить"
+        form:
+          body: "Ответ"
+          correct: "Правильный"
+          submit: "Создать ответ"
+        edit:
+          edit: "Редактировать ответ"
+          back: "Назад"
+        new:
+          new_answer: "Новый ответ"
+          back: "Назад"
+        show:
+          question: "Вопрос"
+          answer: "Ответ"
+          correct: "Правильный"
+          edit: "Редактировать"
+          back: "Назад"
+      questions:
+        form:
+          body: "Вопрос"
+          back: "Назад"
+        question:
+          show_question: "Показать "
+          edit_question: "Изменить "
+          delete_question: "Удалить "
+        show:
+          question: "Вопрос"
+          answers: "Ответы"
+          new_answer: "Новый ответ"
   tests_mailer:
       completed_test:
           subject: "Вы успешно завершили тест на TestGuru!"
+  devise:
+    registrations:
+      new:
+        sign_up: "Зарегистрироватся"
+        email: "email"
+        first_name: "Имя"
+        last_name: "Фамилия"
+        password: "Пароль"
+        password_confirmation: "Подтверждение пароля"
+    sessions:
+      new:
+        Login: "Войти"
+        password: "Пароль"
+        remember_me: "Запомнить"
+    confirmations:
+      new:
+        resend: "Повторно отправить инструкции по подтверждению"
+    shared:
+      links:
+        forgot: "Забыли свой пароль?"
+        confirm_email: "Не получили инструкции подтверждения?"
+        unlock_email: "Не получили инструкции по разблокировке?"
+        omniauthable: "Войти в систему с"
 
 
