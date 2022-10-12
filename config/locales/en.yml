@@ -20,11 +20,24 @@
           title: "Title"
           level: "Level"
           category_id: "Category"
+    feedback_mailer:
+      new_feedback:
+        new_feedback_arrived: "New feedback arrived"
+        from: "From:"
+        message: "Message:"
+    layouts:
+      application:
+          feedback: "Feedback"
     shared:
       errors:
         header:
           one: "%{count} error detected"
           other: "%{count} errors detected"
+    static_pages:
+      feedback:
+        send_your_feedback: "Send your feedback"
+        send: "Send"
+        message: "Message"
     application:
       welcome: "Welcome"
       logout: "Logout"

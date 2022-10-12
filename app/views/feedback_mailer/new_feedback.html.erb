@@ -5,12 +5,12 @@
   <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
  </head>
   <body>
-    <h2>New feedback arrived</h2>
+    <h2><%=t('.new_feedback_arrived')%></h2>
      <p>
-      <b>From: </b><%= @feedback[:email] %>
+      <b><%=t('.from')%></b><%= @feedback[:email] %>
      </p>
 
-      <p><b>Message:</b></p>
+      <p><b><%=t('.message')%></b></p>
     <p><%= @feedback[:message] %></p>
  </body>
 </html>
