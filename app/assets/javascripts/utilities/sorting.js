@@ -24,12 +24,15 @@ function sortRowsByTitle() {
     }
 
     let sortedTable = document.createElement('table');
-
+    let tbody = document.createElement('tbody')
     sortedTable.classList.add('table');
-    sortedTable.appendChild(rows[0]);
+    tbody.appendChild(rows[0]);
+    sortedTable.appendChild(tbody);
+
 
     for (let i = 0; i < sortedRows.length; i++) {
-        sortedTable.appendChild(sortedRows[i]);
+        tbody.appendChild(sortedRows[i]);
+        sortedTable.appendChild(tbody);
     }
 
     table.parentNode.replaceChild(sortedTable, table);
