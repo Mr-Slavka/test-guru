@@ -39,8 +39,8 @@ function sortRowsByTitle() {
 }
 
 function compareRowsAsc(row1, row2) {
-    let testTitle1 = row1.querySelector('td');
-    let testTitle2 = row2.querySelector('td');
+    let testTitle1 = row1.querySelector('td').textContent;
+    let testTitle2 = row2.querySelector('td').textContent;
 
     if (testTitle1 < testTitle2) { return -1 }
     if (testTitle1 > testTitle2) { return 1 }
@@ -48,8 +48,8 @@ function compareRowsAsc(row1, row2) {
 }
 
 function compareRowsDesc(row1, row2) {
-    let testTitle1 = row1.querySelector('td');
-    let testTitle2 = row2.querySelector('td');
+    let testTitle1 = row1.querySelector('td').textContent;
+    let testTitle2 = row2.querySelector('td').textContent;
 
     if (testTitle1 < testTitle2) { return 1 }
     if (testTitle1 > testTitle2) { return -1 }

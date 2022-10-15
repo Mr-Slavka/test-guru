@@ -1,6 +1,6 @@
 class FeedbackMailer < ApplicationMailer
   def new_feedback(feedback)
-    @email = Admin.first.email
+    @email = User.find_by(type: 'Admin').email
     @feedback = feedback
 
     mail(to: @email, subject: 'Feedback')
