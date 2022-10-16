@@ -106,6 +106,8 @@
           back: "Back"
         form_inline:
           submit: "OK"
+        form:
+          published: "published"
       gists:
         index:
           header: "Users gists"

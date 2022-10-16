@@ -15,7 +15,10 @@
     <p>
       <%= f.hidden_field :author_id, value: "#{current_user.id}"  %>
     </p>
-
+    <p>
+      <%= f.label t('.published') %><br>
+      <%= f.check_box :published %>
+    </p>
     <p>
       <%= f.label :category_id %>
       <%= f.collection_select :category_id, Category.all, :id, :title, prompt: true %>

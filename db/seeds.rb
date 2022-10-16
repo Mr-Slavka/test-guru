@@ -26,7 +26,10 @@
                        { title: 'JavaScript', level: 1, author: users.sample, category_id: categories[1].id }])
 
   questions = Question.create([{ body: 'Какой метод позволяет привести строку в нижний регистр?', test_id: tests[0].id },
-                               { body: 'Какая арифметическая операция приводит к ошибке в javascript?', test_id: tests[2].id }])
+                               { body: 'Какая арифметическая операция приводит к ошибке в javascript?', test_id: tests[2].id },
+                               { body: 'В каком варианте вы получите число без пропуска строки от пользователя?', test_id: tests[0].id },
+                               { body: 'Как называется самый популярный фреймворк языка Ruby для веба?', test_id: tests[0].id },
+                               { body: 'Чем отличается puts от print?', test_id: tests[0].id }])
 
 
 
@@ -37,7 +40,20 @@
                  { body: 'Деление на ноль.', correct: false, question_id: questions[1].id },
                  { body: 'Умножение числа на строку.', correct: false, question_id: questions[1].id },
                  { body: 'Корень из отрицательного числа.', correct: false, question_id: questions[1].id },
-                 { body: 'Никакая из вышеперечисленных.', correct: true, question_id: questions[1].id }])
+                 { body: 'Никакая из вышеперечисленных.', correct: true, question_id: questions[1].id },
+                 { body: 'num = gets.to_i', correct: false, question_id: questions[2].id },
+                 { body: 'num = gets.chomp()', correct: false, question_id: questions[2].id },
+                 { body: 'num = chomp().to_i', correct: false, question_id: questions[2].id },
+                 { body: 'num = gets', correct: false, question_id: questions[2].id },
+                 { body: 'num = gets.chomp().to_i', correct: true, question_id: questions[2].id },
+                 { body: 'Rails', correct: false, question_id: questions[3].id },
+                 { body: 'Ruby Framework', correct: false, question_id: questions[3].id },
+                 { body: 'Ruby Web', correct: false, question_id: questions[3].id },
+                 { body: 'Ruby On Rails', correct: true, question_id: questions[3].id },
+                 { body: 'Ничем, оба делают одно и тоже', correct: false, question_id: questions[4].id },
+                 { body: 'puts без пропуска строки, а print с пропуском', correct: false, question_id: questions[4].id },
+                 { body: 'puts позволяет выводить переменные, а print только текст', correct: false, question_id: questions[4].id },
+                 { body: 'print без пропуска строки, а puts с пропуском', correct: false, question_id: questions[4].id }])
 
 
 

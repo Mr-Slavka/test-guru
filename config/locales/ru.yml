@@ -108,6 +108,8 @@ ru:
               back: "Назад"
           form_inline:
             submit: "Принять"
+          form:
+            published: "опубликовать"
       gists:
         index:
           header: "Пользовательские gists"
