@@ -5,11 +5,11 @@
     <h2><%= question_header(@question)%></h2>
 
     <p>
-      <%= f.label :body %><br>
+      <%= f.label t('.body') %><br>
       <%= f.text_field :body, id: :question_body %>
     </p>
 
     <p><%= f.submit %></p>
   <% end %>
 
-  <%= link_to t('admin.tests.show.back'), admin_test_path(@question.test) %>
+  <%= link_to t('.back'), admin_test_path(@question.test) %>

@@ -3,14 +3,17 @@
     belongs_to :author, class_name: 'User', foreign_key: 'author_id'
     belongs_to :category
 
-    has_many :questions, dependent: :destroy
     has_many :test_passages, dependent: :destroy
     has_many :users, through: :test_passages
+    has_many :questions, dependent: :destroy
+
 
     validates :title, presence: true,
                       uniqueness: { scope: %i[level] }
     validates :level, numericality: { only_integer: true, greater_than: 0 }
 
+
+    scope :published, -> { where(published: true) }
     scope :easy_lvl, -> { by_level(0..1) }
     scope :medium_lvl, -> { by_level(2..4) }
     scope :hard_lvl, -> { by_level(5..Float::INFINITY) }

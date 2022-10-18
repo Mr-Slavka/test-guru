@@ -1,0 +1,16 @@
+
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+ </head>
+  <body>
+    <h2><%=t('.new_feedback_arrived')%></h2>
+     <p>
+      <b><%=t('.from')%></b><%= @feedback[:email] %>
+     </p>
+
+      <p><b><%=t('.message')%></b></p>
+    <p><%= @feedback[:message] %></p>
+ </body>
+</html>
