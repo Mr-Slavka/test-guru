@@ -88,6 +88,7 @@
           actions: "Actions"
           create_test: "Create test"
           show_gists: "Show gists"
+          show_badges: "Show_badges"
         create:
           success: "Test was successfully created."
         new:
@@ -148,6 +149,38 @@
           question: "Question"
           answers: "Answers"
           new_answer: "New answer"
+      badges:
+        form:
+          prohibited: "Prohibited"
+          title: "Title"
+          choose_image: "Choose image"
+          rule: "Rule"
+          select_rule: "Select_rule"
+          rule_options: "Rule_options'"
+        edit:
+          edit_badge: "Edit_badge"
+          show: "Show"
+          back: "Back"
+        index:
+          badges: "Badges"
+          title: "Title"
+          badge: "Badge"
+          actions: "Actions"
+          show: "Show"
+          edit: "Edit"
+          delete: "Delete"
+          sure: "Sure ?"
+          new_badge: "New badge"
+          back: "Back"
+        new:
+          new_badge: "New badge"
+          back: "Back"
+        show:
+          title: "Title"
+          image: "Image"
+          rule: "Rule"
+          edit: "Edit"
+          back: "Back"
     tests_mailer:
       completed_test:
         subject: "You just completed the TestGuru test!"
@@ -174,3 +207,9 @@
           confirm_email: "Didn't receive confirmation instructions?"
           unlock_email: "Didn't receive unlock instructions?"
           omniauthable: "Sign in with"
+    badges:
+      index:
+        badges: "Badges"
+        badge: "Badge"
+        title: "Title"
+        back: "Back"

@@ -14,4 +14,7 @@
       <th><%= t('.actions') %></th>
     </tr>
     <%= render @tests %>
+
+   <div> <%= link_to "Задать вопрос администратору", feedback_path %></div>
+    <%= link_to "Просмотреть достижения", badges_path %>
   </table>
