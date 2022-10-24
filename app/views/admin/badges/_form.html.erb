@@ -34,7 +34,7 @@
 
   <p>
     <%= form.label t('.rule') %>
-    <%= form.select :rule, badges_rules, include_blank: t('.select_rule') %>
+    <%= form.select :rule, Badge.rules.keys, include_blank: t('.select_rule') %>
   </p>
 
   <p>

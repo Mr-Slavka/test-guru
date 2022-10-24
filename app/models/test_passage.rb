@@ -8,13 +8,15 @@
 
     before_validation :set_current_question
 
+    scope :successful, -> { where(successful: true) }
+
     def completed?
       current_question.nil?
     end
 
     def accept!(answer_ids)
       self.correct_questions += 1 if correct_answer?(answer_ids)
-
+      self.successful = true if pass?
       save!
     end
 
