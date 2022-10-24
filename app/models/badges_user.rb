@@ -1,5 +1,4 @@
-
-  class BadgesUser < ApplicationRecord
-    belongs_to :user
-    belongs_to :badge
-  end
+class BadgesUser < ApplicationRecord
+  belongs_to :user
+  belongs_to :badge
+end

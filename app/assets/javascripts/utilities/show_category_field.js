@@ -1,4 +1,3 @@
-
 document.addEventListener('turbolinks:load', function() {
     let control = document.getElementById('badge_rule');
 

@@ -1,4 +1,3 @@
-
 class PasswordMatch {
 
     constructor (page) {

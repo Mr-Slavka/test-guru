@@ -1,20 +1,19 @@
+<h2><%= t('.header') %></h2>
 
-  <h2><%= t('.header') %></h2>
+<table class="table">
+  <tr class= "fs-5">
+  <th class="sort-by-title pointer">
+    <%= t('.title') %>
+    <%= octicon 'arrow-up', class: 'text-success hide' %>
+  <%= octicon 'arrow-down', class: 'text-success hide' %>
+  </th>
 
-  <table class="table">
-    <tr class= "fs-5">
-    <th class="sort-by-title pointer">
-      <%= t('.title') %>
-      <%= octicon 'arrow-up', class: 'text-success hide' %>
-    <%= octicon 'arrow-down', class: 'text-success hide' %>
-    </th>
+    <th><%= t('.level') %></th>
+    <th><%= t('.questions_count') %></th>
+    <th><%= t('.actions') %></th>
+  </tr>
+  <%= render @tests %>
 
-      <th><%= t('.level') %></th>
-      <th><%= t('.questions_count') %></th>
-      <th><%= t('.actions') %></th>
-    </tr>
-    <%= render @tests %>
-
-   <div> <%= link_to "Задать вопрос администратору", feedback_path %></div>
-    <%= link_to "Просмотреть достижения", badges_path %>
-  </table>
+ <div> <%= link_to "Задать вопрос администратору", feedback_path %></div>
+  <%= link_to "Просмотреть достижения", badges_path %>
+</table>

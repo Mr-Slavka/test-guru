@@ -1,14 +1,13 @@
+<h1><%= t('.header', title: @test_passage.test.title) %></h1>
 
-  <h1><%= t('.header', title: @test_passage.test.title) %></h1>
+<% if @test_passage.pass? %>
+  <p>
+    <%= t('.successful_html', score: @test_passage.correct_questions) %>
+  </p>
+<% else %>
+  <p>
+    <%= t('.unsuccessful_html', score: @test_passage.correct_questions) %>
+  </p>
+<% end %>
 
-  <% if @test_passage.pass? %>
-    <p>
-      <%= t('.successful_html', score: @test_passage.correct_questions) %>
-    </p>
-  <% else %>
-    <p>
-      <%= t('.unsuccessful_html', score: @test_passage.correct_questions) %>
-    </p>
-  <% end %>
-
-  <p><%= link_to t('.all_tests'), tests_path %></p>
+<p><%= link_to t('.all_tests'), tests_path %></p>

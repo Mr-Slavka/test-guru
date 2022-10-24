@@ -1,15 +1,14 @@
+<%= form_with model: [:admin, @test, @question] , local: true do |f| %>
+  <%= render 'shared/errors', resource: @question %>
 
-  <%= form_with model: [:admin, @test, @question] , local: true do |f| %>
-    <%= render 'shared/errors', resource: @question %>
+  <h2><%= question_header(@question)%></h2>
 
-    <h2><%= question_header(@question)%></h2>
+  <p>
+    <%= f.label t('.body') %><br>
+    <%= f.text_field :body, id: :question_body %>
+  </p>
 
-    <p>
-      <%= f.label t('.body') %><br>
-      <%= f.text_field :body, id: :question_body %>
-    </p>
+  <p><%= f.submit %></p>
+<% end %>
 
-    <p><%= f.submit %></p>
-  <% end %>
-
-  <%= link_to t('.back'), admin_test_path(@question.test) %>
+<%= link_to t('.back'), admin_test_path(@question.test) %>

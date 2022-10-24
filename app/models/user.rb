@@ -1,7 +1,5 @@
 class User < ApplicationRecord
 
-
-
   devise :database_authenticatable,
          :registerable,
          :recoverable,
@@ -9,9 +7,6 @@ class User < ApplicationRecord
          :trackable,
          :validatable,
          :confirmable
-
-
-
 
   has_many :user_tests, class_name: 'Test', foreign_key: :author_id, dependent: :destroy
   has_many :test_passages, dependent: :destroy
