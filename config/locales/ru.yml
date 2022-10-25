@@ -90,6 +90,7 @@ ru:
               actions: "Действия"
               create_test: "Создать тест"
               show_gists: "Показать gist'ы"
+              show_badges: "Показать Бейджи"
           create:
               success: "Тест успешно создан."
           new:
@@ -150,6 +151,38 @@ ru:
           question: "Вопрос"
           answers: "Ответы"
           new_answer: "Новый ответ"
+      badges:
+        form:
+          prohibited: "Не сохранен"
+          title: "Название"
+          choose_image: "Выбор картинки"
+          rule: "Правило"
+          select_rule: "Выбрать правило"
+          rule_options: "Опции правила"
+        edit:
+          edit_badge: "Изменить бейдж"
+          show: "Показать"
+          back: "Назад"
+        index:
+          badges: "Бейджи"
+          title: "Название"
+          badge: "Бейдж"
+          actions: "Действия"
+          show: "Показать"
+          edit: "Редактировать"
+          delete: "Удалить"
+          sure: "Уверены ?"
+          new_badge: "Новый бейдж"
+          back: "Назад"
+        new:
+          new_badge: "Новый бейдж"
+          back: "Назад"
+        show:
+          title: "Название"
+          image: "Картинка"
+          rule: "Правило"
+          edit: "Редактировать"
+          back: "Назад"
   tests_mailer:
       completed_test:
           subject: "Вы успешно завершили тест на TestGuru!"
@@ -176,5 +209,9 @@ ru:
         confirm_email: "Не получили инструкции подтверждения?"
         unlock_email: "Не получили инструкции по разблокировке?"
         omniauthable: "Войти в систему с"
-
-
+  badges:
+    index:
+      badges: "Бейджи"
+      badge: "Бейдж"
+      title: "Название"
+      back: "Назад"

@@ -1,4 +1,3 @@
-
 document.addEventListener('turbolinks:load', function() {
     let page = document.querySelector('.check-pass');
     let password = document.getElementById('user_password');

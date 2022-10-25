@@ -1,12 +1,11 @@
+<nav class="navbar navbar-light bg-light">
+  <%= link_to t('admin.nav.header'), admin_tests_path, class: "navbar-brand" %>
 
-  <nav class="navbar navbar-light bg-light">
-    <%= link_to t('admin.nav.header'), admin_tests_path, class: "navbar-brand" %>
-
-    <span class="navbar-text">
-      <%= current_user.email %> |
-      <%= link_to t('admin.nav.logout'), destroy_user_session_path, method: :delete %>
-      <%= content_tag :p,"#{t('admin.nav.welcome')}, #{current_user.first_name} #{current_user.last_name}!", class: "alert alert-info" %>
-    </span>
+  <span class="navbar-text">
+    <%= current_user.email %> |
+    <%= link_to t('admin.nav.logout'), destroy_user_session_path, method: :delete %>
+    <%= content_tag :p,"#{t('admin.nav.welcome')}, #{current_user.first_name} #{current_user.last_name}!", class: "alert alert-info" %>
+  </span>
 
 
-  </nav>
+</nav>

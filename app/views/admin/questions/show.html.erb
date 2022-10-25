@@ -1,15 +1,14 @@
+<h1> <%=t('.question')%></h1>
+<%= @question.inspect %><br>
 
-  <h1> <%=t('.question')%></h1>
-  <%= @question.inspect %><br>
 
+<h2><%= t('.answers') %></h2>
+<%= link_to t('.new_answer'), new_admin_question_answer_path(@question) %>
 
-  <h2><%= t('.answers') %></h2>
-  <%= link_to t('.new_answer'), new_admin_question_answer_path(@question) %>
+<ol>
+  <%= render @question.answers %>
+</ol>
 
-  <ol>
-    <%= render @question.answers %>
-  </ol>
-
-  <p> <%= link_to t('admin.tests.show.back'), admin_test_path(@question.test) %> </p>
-  <p> <%= link_to t('helpers.submit.test.delete'), admin_question_path(@question), method: :delete,
-                  data: { confirm: t('helpers.submit.test.confirm') } %> </p>
+<p> <%= link_to t('admin.tests.show.back'), admin_test_path(@question.test) %> </p>
+<p> <%= link_to t('helpers.submit.test.delete'), admin_question_path(@question), method: :delete,
+                data: { confirm: t('helpers.submit.test.confirm') } %> </p>

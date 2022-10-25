@@ -7,6 +7,7 @@
 
     devise_for :users, path: :gurus, path_names: { sign_in: :login, sign_out: :logout }
 
+    resources :badges, only: :index
 
     resources :tests, only: :index do
       post :start, on: :member
@@ -28,6 +29,7 @@
           resources :answers, shallow: true, except: :index
         end
       end
+      resources :badges, only: %i[index show new create edit update destroy]
       resources :gists, only: :index
     end
 

@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong><%= t('.title') %></strong>
+  <%= @badge.title %>
+</p>
+
+<p>
+  <strong><%= t('.image') %></strong>
+  <%=image_tag "badges/#{@badge.image}.svg" %>
+</p>
+
+<p>
+  <strong><%= t('.rule') %></strong>
+  <%= @badge.rule %>
+</p>
+
+
+<%= link_to t('.edit'), edit_admin_badge_path(@badge) %> |
+<%= link_to t('.back'), admin_badges_path %>

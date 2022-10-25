@@ -1,6 +1,5 @@
-
-  <%= form_with model: [:admin, @question, @answer], local: true do |form| %>
-    <%= render 'shared/errors', resource: @answer %>
+<%= form_with model: [:admin, @question, @answer], local: true do |form| %>
+  <%= render 'shared/errors', resource: @answer %>
 
     <p>
       <%= form.label t('.body') %><br>
@@ -12,5 +11,5 @@
       <%= form.check_box :correct, id: :answer_correct %>
     </p>
 
-    <p><%= form.submit t('.submit') %></p>
-  <% end %>
+  <p><%= form.submit t('.submit') %></p>
+<% end %>
