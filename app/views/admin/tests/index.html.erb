@@ -1,24 +1,23 @@
+<h2><%= t('.header') %></h2>
 
-  <h2><%= t('.header') %></h2>
+<p>
+  <%= link_to t('.create_test'), new_admin_test_path %>
+</p>
 
-  <p>
-    <%= link_to t('.create_test'), new_admin_test_path %>
-  </p>
+<%= render 'shared/errors', resource: @test %>
 
-  <%= render 'shared/errors', resource: @test %>
-
-  <table class="table">
-    <tr class="fs-5">
-      <th class="sort-by-title pointer">
-        <%= t('.title') %>
-        <%= octicon 'arrow-up', class: 'text-success hide' %>
-        <%= octicon 'arrow-down', class: 'text-success hide' %>
-      </th>
-      <th><%= t('.level') %></th>
-      <th><%= t('.questions_count') %></th>
-      <th colspan="4"><%= t('.actions') %></th>
-    </tr>
-    <%= render @tests %>
-  </table>
-    <%= link_to t('.show_gists'), admin_gists_path %>
-    <%= link_to t('.show_badges'), admin_badges_path %>
+<table class="table">
+  <tr class="fs-5">
+    <th class="sort-by-title pointer">
+      <%= t('.title') %>
+      <%= octicon 'arrow-up', class: 'text-success hide' %>
+      <%= octicon 'arrow-down', class: 'text-success hide' %>
+    </th>
+    <th><%= t('.level') %></th>
+    <th><%= t('.questions_count') %></th>
+    <th colspan="4"><%= t('.actions') %></th>
+  </tr>
+  <%= render @tests %>
+</table>
+  <%= link_to t('.show_gists'), admin_gists_path %>
+  <%= link_to t('.show_badges'), admin_badges_path %>
