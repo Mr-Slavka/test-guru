@@ -16,6 +16,7 @@ class TestPassage < ApplicationRecord
   def accept!(answer_ids)
     self.correct_questions += 1 if correct_answer?(answer_ids)
     self.successful = true if pass?
+    self.current_question = nil if overtime?(end_time)
     save!
   end
 
@@ -26,6 +27,19 @@ class TestPassage < ApplicationRecord
   def pass?
     correct_questions / test.questions.count >= SUCCESS_RATIO
   end
+
+  def overtime?(end_time)
+    Time.current >= end_time
+  end
+
+  def end_time
+    created_at + test.time.seconds
+  end
+
+  def seconds_left
+    (end_time - Time.current).to_i
+  end
+
 
   private
 

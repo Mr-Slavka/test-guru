@@ -42,7 +42,7 @@ class Admin::TestsController < Admin::BaseController
   private
 
   def test_params
-    params.require(:test).permit(:title, :level, :category_id, :author_id, :published)
+    params.require(:test).permit(:title, :level, :category_id, :author_id, :published, :time)
   end
 
   def find_test

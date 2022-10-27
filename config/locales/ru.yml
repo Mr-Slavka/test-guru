@@ -111,6 +111,7 @@ ru:
             submit: "Принять"
           form:
             published: "опубликовать"
+            time: "Время на тест"
       gists:
         index:
           header: "Пользовательские gists"
